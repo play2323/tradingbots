@@ -1,0 +1,31 @@
+django
+Django==3.2.10
+django-crispy-forms==1.12.0
+djangorestframework==3.12.4
+psycopg2-binary==2.9.3
+python-binance
+python-krakenex
+python-huobi
+textblob
+ccxt
+time
+requests
+json
+random
+os
+sys
+render
+path
+models
+views
+.views
+from .models import TradingPair, Trade
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from .models import TradingPair
+from .arbitrage import ArbitrageStrategy
+from django.urls import path
+from trading_bot.views import StartBotView, StopBotView, start_bot, stop_bot
+from decimal import Decimal
+from django.urls import path
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
